@@ -1,6 +1,6 @@
 class ScriptsController < ApplicationController
-  scriptffolding :scripts, :content_field => :content
-  scriptffolding_button :action => "run", :icon => "/images/play.gif"
+  scriptffold :scripts, :content_field => :content
+  scriptffold_button :action => "run", :icon => "/images/play.gif"
 
   def run
     s = Script.find(params[:id])
