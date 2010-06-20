@@ -14,6 +14,7 @@ class ScriptsController < ApplicationController
     s = Script.find(params[:id])
     s.content = params[:content]
     #DON'T save the script
-    s.run # run the script
+    execution = s.run # run the script
+    @output = execution.standard_output
   end
 end
